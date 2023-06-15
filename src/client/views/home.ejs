@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO List</title>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-    <!-- Basic HTML File -->
+    <!-- Wrapper container  -->
+    <div class="container"> 
+        <!-- heading -->
+        <header>
+            <h1>ToDo App</h1>
+        </header>
+        <!-- Form to collect data vide post method-->
+        <form action="/addTask" method="post">
+            <!-- Description Box -->
+            <div class="inputBox" id="descriptionContainer">
+                <label for="description">DESCRIPTION</label>
+                <input type="text" name="description" id="description" placeholder="What do you need to do?" required>
+            </div>
+            <!-- Container wrapping both other input fields  -->
+            <div class="inputContainer">
+                <span class="inputBox" id="categoryContainer">
+                    <label for="category">CATEGORY</label>
+                    <select name="category" id="category">
+                        <option value="Choose a category">Choose a category</option>
+                        <option value="work">Work</option>
+                        <option value="home">Home</option>
+                        <option value="school">School</option>
+                    </select>
+                </span>
+                <span class="inputBox" id="dateContainer">
+                    <label for="date">DATE</label>
+                    <input type="date" name="date" id="date" placeholder="dd/mm/yy" required>
+                </span>
+            </div>
+            <!-- Wrapper for buttons -->
+            <div class="buttonContainer">
+                <!-- button to add task -->
+                <input type="submit" class="btn" id="addTaskBtn" value="ADD TASK">
+                <!-- button to delete task -->
+                <input type="button" class="btn" id="deleteTaskBtn" value="DELETE TASK">
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>

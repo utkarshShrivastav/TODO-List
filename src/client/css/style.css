@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding:0;
+    border:none;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: rgb(128,128,128);
+}
+
+.container{
+    background-color: white;
+    width:40%;
+    margin: 50px auto 0;
+}
+header{
+    width:100%;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+
+h1{
+    padding: 10px 0;
+    font-size: 2.5rem;
+}
+
+form{
+    width:100%;
+}
+
+label{
+    font-weight: 900;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+input, select, option{
+    font-size: 1rem;
+}
+
+:focus{
+    outline: none;
+}
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    border-bottom: 1px solid grey;
+}
+
+.inputContainer{
+    display: flex;
+}
+
+#categoryContainer, #dateContainer{
+    flex-grow: 1;
+}
+
+#categoryContainer{
+    border-right:1px solid grey
+}
+.buttonContainer{
+ padding: 20px 20px;
+ display: flex;
+ justify-content: center;
+}
+
+.btn{
+    padding: 10px;
+    color:white;
+    font-weight: 900;
+}
+
+#addTaskBtn{
+    background-color: grey;
+    margin-right: 10px;
+}
+#addTaskBtn::before{
+    content: "+";
+    font-size: 1rem;
+    font-weight: bold;
+    color:white;
+}
+#deleteTaskBtn{
+    background-color: red;
+}
