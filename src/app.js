@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const routes = require("./backend/routes/htmlRoutes");
 const port = 8000;
+const bodyParser = require("body-parser");
 const app = express();
 
 // Setting up EJS
@@ -11,6 +12,10 @@ app.set("view engine", "ejs");
 
 // Setting up Static Files
 app.use(express.static(path.join(__dirname, "./client")));
+
+//Setting up Body Parser
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // Setting up route
 app.use("/", routes);
